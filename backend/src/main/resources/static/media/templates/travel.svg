@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#89d9ff"/>
+      <stop offset="1" stop-color="#f3d8b5"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d4c58"/>
+      <stop offset="1" stop-color="#55c1ad"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#sky)"/>
+  <circle cx="910" cy="280" r="130" fill="#fff4cf" opacity=".9"/>
+  <path d="M0 680C220 590 360 760 570 665S920 580 1200 700V1500H0Z" fill="url(#sea)"/>
+  <path d="M0 900c280-90 370 80 610-20s390 10 590-40v660H0Z" fill="#12363c" opacity=".82"/>
+  <g fill="#fff" opacity=".75">
+    <path d="M90 1120c45-74 76-84 132-118-25 81-11 165 28 233-64-39-103-94-160-115Z"/>
+    <path d="M1040 990c-71-33-123-25-188-17 69 38 112 105 129 184 27-74 24-119 59-167Z"/>
+  </g>
+  <rect x="80" y="100" width="710" height="4" fill="#102e36" opacity=".55"/>
+  <text x="80" y="75" fill="#102e36" font-family="Arial, sans-serif" font-size="46" letter-spacing="12">WANDER NOTES</text>
+  <text x="80" y="1330" fill="#f8f4e7" font-family="Georgia, serif" font-size="108">去远方</text>
+  <text x="86" y="1390" fill="#b7f34b" font-family="Arial, sans-serif" font-size="34" letter-spacing="8">TRAVEL POSTCARD</text>
+</svg>

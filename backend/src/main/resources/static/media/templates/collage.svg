@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <rect width="1200" height="1500" fill="#e9e1d2"/>
+  <path d="M0 0h700L430 1500H0Z" fill="#242d32"/>
+  <rect x="705" y="0" width="495" height="530" fill="#b9ce76"/>
+  <rect x="705" y="560" width="495" height="380" fill="#daa17d"/>
+  <rect x="705" y="970" width="495" height="530" fill="#486d70"/>
+  <circle cx="955" cy="265" r="128" fill="#f6f0e3" opacity=".58"/>
+  <path d="M0 1050q200-130 400-20t300-25v495H0Z" fill="#6f8d69"/>
+  <text x="70" y="120" fill="#b7f34b" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">FIELD NOTES</text>
+  <text x="68" y="270" fill="#f6efe4" font-family="Georgia, serif" font-size="112">Little</text>
+  <text x="68" y="380" fill="#f6efe4" font-family="Georgia, serif" font-size="112" font-style="italic">things.</text>
+  <text x="68" y="1370" fill="#e8e7db" font-family="Arial, sans-serif" font-size="27" letter-spacing="7">THREE MOMENTS / ONE MEMORY</text>
+</svg>

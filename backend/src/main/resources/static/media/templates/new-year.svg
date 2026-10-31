@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e13b30"/>
+      <stop offset="1" stop-color="#821c1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#red)"/>
+  <circle cx="940" cy="250" r="310" fill="#ffbd55" opacity=".24"/>
+  <circle cx="230" cy="1190" r="360" fill="#4c0e15" opacity=".54"/>
+  <path d="M0 680q170-125 335 0t335 0 335 0 195 0v160q-140-90-280 0t-335 0-335 0-250 0Z" fill="#f2b74e" opacity=".8"/>
+  <rect x="75" y="72" width="1050" height="1356" rx="32" fill="none" stroke="#ffd17f" stroke-width="3" opacity=".65"/>
+  <text x="600" y="430" text-anchor="middle" fill="#ffd582" font-family="Georgia, serif" font-size="210">2027</text>
+  <text x="600" y="600" text-anchor="middle" fill="#fff5e8" font-family="Arial, sans-serif" font-size="42" letter-spacing="15">NEW YEAR, NEW LIGHT</text>
+  <text x="600" y="1240" text-anchor="middle" fill="#f8e8c9" font-family="Georgia, serif" font-size="140">岁岁欢喜</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e7cdb7"/>
+      <stop offset=".5" stop-color="#d9a58c"/>
+      <stop offset="1" stop-color="#6a4253"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="660" cy="720" r="420" fill="#f6eadc" opacity=".74"/>
+  <ellipse cx="660" cy="770" rx="300" ry="310" fill="#f9efe5"/>
+  <ellipse cx="490" cy="540" rx="110" ry="175" fill="#eee0d1" transform="rotate(-22 490 540)"/>
+  <ellipse cx="830" cy="540" rx="110" ry="175" fill="#eee0d1" transform="rotate(22 830 540)"/>
+  <ellipse cx="545" cy="730" rx="34" ry="42" fill="#201b1b"/>
+  <ellipse cx="775" cy="730" rx="34" ry="42" fill="#201b1b"/>
+  <circle cx="558" cy="720" r="10" fill="#fff"/>
+  <circle cx="788" cy="720" r="10" fill="#fff"/>
+  <path d="M625 830q35-30 70 0-10 40-35 42t-35-42Z" fill="#2c2222"/>
+  <path d="M660 874c-24 46-78 24-62-20m62 20c24 46 78 24 62-20" fill="none" stroke="#2c2222" stroke-width="10" stroke-linecap="round"/>
+  <rect x="80" y="90" width="1040" height="1320" rx="48" fill="none" stroke="#fff5ea" stroke-width="3" opacity=".65"/>
+  <text x="120" y="1330" fill="#fff7ed" font-family="Georgia, serif" font-size="96">The good one.</text>
+  <text x="124" y="1390" fill="#272021" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">FAMILY PORTRAIT / NO. 04</text>
+</svg>

@@ -1,0 +1,21 @@
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/coverage/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+frontend/.env.local
+
+# Backend
+backend/target/
+backend/data/
+backend/*.log
+
+# Runtime
+data/
+.env
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

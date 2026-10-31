@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow" cx=".8" cy=".2" r=".9">
+      <stop offset="0" stop-color="#d9bd82"/>
+      <stop offset=".55" stop-color="#684a32"/>
+      <stop offset="1" stop-color="#171310"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <circle cx="690" cy="730" r="380" fill="#d8c5a4" opacity=".16"/>
+  <circle cx="690" cy="730" r="290" fill="#eae0ce"/>
+  <circle cx="690" cy="730" r="225" fill="#51311e"/>
+  <circle cx="690" cy="730" r="190" fill="#2b160d"/>
+  <path d="M595 680c85-116 229-80 211 25-10 66-83 80-126 37-34-34-52-52-85-62Z" fill="#e6d2b1" opacity=".82"/>
+  <path d="M425 1050c80-55 179-54 259 3" fill="none" stroke="#dfc28e" stroke-width="3" opacity=".5"/>
+  <text x="90" y="110" fill="#ebdcc0" font-family="Arial, sans-serif" font-size="34" letter-spacing="10">SLOW MORNING / 08</text>
+  <text x="82" y="1290" fill="#fff8eb" font-family="Georgia, serif" font-size="140">A quiet</text>
+  <text x="82" y="1410" fill="#b7f34b" font-family="Georgia, serif" font-size="140" font-style="italic">moment.</text>
+</svg>

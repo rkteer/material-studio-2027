@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:tc:mysql:5.7.36:///material_studio?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&TC_REUSABLE=true
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    username: test
+    password: test
+  flyway:
+    enabled: true
+
+app:
+  session:
+    secret: test-session-secret-with-more-than-24-characters
+    secure-cookie: false
+  simulation:
+    default-delay-ms: 0
+    default-fail-stage: ""
+  worker:
+    threads: 1
+    queue-capacity: 10

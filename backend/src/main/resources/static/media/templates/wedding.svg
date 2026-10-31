@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="dark" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#17191d"/>
+      <stop offset="1" stop-color="#514047"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#dark)"/>
+  <circle cx="330" cy="640" r="210" fill="#cdb6a0" opacity=".58"/>
+  <circle cx="810" cy="650" r="225" fill="#e1d4c3" opacity=".42"/>
+  <path d="M130 1350c110-340 112-470 200-660 65 260 72 477 28 730Z" fill="#e7ddd1" opacity=".82"/>
+  <path d="M930 1330c-150-280-179-420-157-640 124 192 201 390 275 665Z" fill="#29252a" opacity=".9"/>
+  <path d="M420 850q192-108 384-10" fill="none" stroke="#d9b879" stroke-width="4"/>
+  <rect x="70" y="74" width="1060" height="1350" rx="6" fill="none" stroke="#d7c7b5" opacity=".45"/>
+  <text x="96" y="143" fill="#dfccae" font-family="Arial, sans-serif" font-size="27" letter-spacing="11">TWO LIVES / ONE STORY</text>
+  <text x="88" y="1310" fill="#f4ede4" font-family="Georgia, serif" font-size="126" font-style="italic">Together,</text>
+  <text x="88" y="1410" fill="#d9b879" font-family="Georgia, serif" font-size="82">always.</text>
+</svg>
