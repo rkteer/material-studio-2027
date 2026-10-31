@@ -32,6 +32,10 @@
 
 数据库迁移位于 `backend/src/main/resources/db/migration`。模板封面位于 `backend/src/main/resources/static/media/templates`，没有依赖付费图库或公司内部资源。后端运行镜像安装 Noto CJK 字体，确保生成结果中的中文文案正常显示。
 
+## 验收版本
+
+源码验收 commit：`12877b84e10da7db8ee11091120f3f18a36cca08`。该提交包含本次运行镜像、响应式布局、弹窗可访问性、会话配置和测试修复；其后的文档提交仅记录本信息。
+
 ## 一键启动
 
 前置条件：Docker Desktop 或兼容的 Docker Engine，以及 Docker Compose v2。
@@ -333,7 +337,7 @@ GitHub Actions 在 push 和 pull request 时执行前端 lint、类型检查、�
 部署：
 
 1. 准备 `APP_SESSION_SECRET`、数据库密码和持久卷。
-2. 拉取验收 commit。
+2. 拉取源码验收 commit `12877b84e10da7db8ee11091120f3f18a36cca08`。
 3. 执行 `docker compose up --build -d`。
 4. 确认 `/actuator/health`、`http://localhost:3000` 和 MySQL 健康状态。
 
