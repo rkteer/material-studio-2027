@@ -33,7 +33,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-material_dev}
       APP_SESSION_SECRET: ${APP_SESSION_SECRET:-local-development-secret-change-me-123456}
       APP_STORAGE_ROOT: /app/data
-      APP_SESSION_SECURE: "false"
+      APP_SESSION_SECURE: "${APP_SESSION_SECURE:-false}"
     ports:
       - "8080:8080"
     volumes:

@@ -13,7 +13,7 @@ import {
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { apiRequest } from "@/lib/api";
 import { queryKeys } from "@/lib/query-keys";
 import {
@@ -55,6 +55,7 @@ export function TaskHistoryPanel({
   const activeCount = allTasks.filter((task) =>
     ACTIVE_STATUSES.includes(task.status),
   ).length;
+  const closePreview = useCallback(() => setPreviewTask(null), []);
 
   return (
     <section
@@ -150,7 +151,7 @@ export function TaskHistoryPanel({
       {previewTask?.resultUrl ? (
         <ResultDialog
           task={previewTask}
-          onClose={() => setPreviewTask(null)}
+          onClose={closePreview}
         />
       ) : null}
     </section>
@@ -300,14 +301,33 @@ function ResultDialog({
   task: ArtworkTask;
   onClose: () => void;
 }) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    closeButtonRef.current?.focus();
+
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        event.preventDefault();
         onClose();
+        return;
+      }
+      if (event.key === "Tab") {
+        event.preventDefault();
+        closeButtonRef.current?.focus();
       }
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      if (
+        previouslyFocused instanceof HTMLElement &&
+        document.contains(previouslyFocused)
+      ) {
+        previouslyFocused.focus();
+      }
+    };
   }, [onClose]);
 
   return (
@@ -316,6 +336,7 @@ function ResultDialog({
         className="modal-backdrop"
         onClick={onClose}
         aria-label="关闭结果预览"
+        tabIndex={-1}
         type="button"
       />
       <div
@@ -330,6 +351,7 @@ function ResultDialog({
             <h2 id="result-title">{task.templateTitle}</h2>
           </div>
           <button
+            ref={closeButtonRef}
             className="icon-button"
             type="button"
             onClick={onClose}

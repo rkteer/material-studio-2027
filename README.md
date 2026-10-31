@@ -30,7 +30,7 @@
 └── .env.example              非敏感配置示例
 ```
 
-数据库迁移位于 `backend/src/main/resources/db/migration`。模板封面位于 `backend/src/main/resources/static/media/templates`，没有依赖付费图库或公司内部资源。
+数据库迁移位于 `backend/src/main/resources/db/migration`。模板封面位于 `backend/src/main/resources/static/media/templates`，没有依赖付费图库或公司内部资源。后端运行镜像安装 Noto CJK 字体，确保生成结果中的中文文案正常显示。
 
 ## 一键启动
 
@@ -298,7 +298,7 @@ mvn -B verify
 - 查询异常保留已获取任务，且不误报任务失败；
 - 阶段索引和终态判断。
 
-当前本地验收结果为前端 4 项测试通过、后端 8 项测试通过，前端生产构建与后端构建均成功。
+当前本地验收结果为前端 5 项测试通过、后端 8 项测试通过，前端生产构建与后端构建均成功。
 
 Testcontainers 测试镜像使用本机可缓存的 `mysql:5.7.36`，用于验证迁移兼容性；正式 Compose 默认使用 MySQL 8.4。容器冒烟验收也通过 `DB_IMAGE=mysql:5.7.36` 完成；当前环境的网络未能拉取完 MySQL 8.4 镜像，因此 8.4 运行镜像属于配置完成但未在本机实际启动的部分。
 
@@ -353,10 +353,11 @@ GitHub Actions 在 push 和 pull request 时执行前端 lint、类型检查、�
 2. 明确 Next.js、Spring Boot、MyBatis、MySQL、Compose 和测试边界后生成初始实现。
 3. 实际运行 lint、TypeScript、Vitest、Maven、Flyway 和 MySQL 容器测试，根据错误修正框架差异与业务缺陷。
 4. 逐项核对验收场景，更新 README 的真实完成度和限制。
+5. 根据实际运行反馈修复容器中文字体、小屏导航遮挡、结果弹窗焦点和会话安全配置，并复跑完整检查。
 
 一个具体例子：MySQL 集成测试发现了“指定 `GENERATION` 阶段失败却在 `VALIDATION` 阶段提前触发”的逻辑问题。修复方式是让强制失败判断同时匹配当前阶段，而不是只要配置了失败就立即执行；随后复跑完整测试集确认成功路径、两种失败路径和多任务行为均通过。
 
-实际投入约 2 小时，包含需求理解、代码实现、依赖下载、测试修正和交付整理，不包含笔试题平台上的等待时间。
+实际投入约 2.5 小时，包含需求理解、代码实现、依赖下载、测试修正、交付整理和验收复测，不包含笔试题平台上的等待时间。
 
 ## 外部代码与素材
 

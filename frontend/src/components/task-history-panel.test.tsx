@@ -1,5 +1,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import {
+  cleanup,
+  render,
+  screen,
+  waitFor,
+  within,
+} from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { TaskHistoryPanel } from "@/components/task-history-panel";
 import { apiRequest } from "@/lib/api";
@@ -84,6 +91,43 @@ describe("TaskHistoryPanel", () => {
     expect(
       screen.getByText("处理中", { selector: ".status-pill" }),
     ).toBeInTheDocument();
+  });
+
+  it("moves focus into the result dialog, traps Tab, and restores the trigger", async () => {
+    mockedApiRequest.mockResolvedValueOnce([
+      task({
+        id: "task-succeeded",
+        status: "SUCCEEDED",
+        stage: "COMPLETED",
+        resultUrl: "/api/tasks/task-succeeded/result",
+      }),
+    ]);
+    const user = userEvent.setup();
+    const queryClient = client();
+
+    render(
+      <QueryClientProvider client={queryClient}>
+        <TaskHistoryPanel userId="demo-lin" />
+      </QueryClientProvider>,
+    );
+
+    const trigger = await screen.findByRole("button", {
+      name: "预览咖啡时刻结果",
+    });
+    await user.click(trigger);
+
+    const dialog = screen.getByRole("dialog");
+    const closeButton = within(dialog).getByRole("button", {
+      name: "关闭结果预览",
+    });
+    expect(closeButton).toHaveFocus();
+
+    await user.tab();
+    expect(closeButton).toHaveFocus();
+
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(trigger).toHaveFocus();
   });
 });
 
